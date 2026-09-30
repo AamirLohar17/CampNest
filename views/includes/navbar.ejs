@@ -1,12 +1,12 @@
 <style>
   .search-btn {
-    background-color:  #fe424d;
+    background-color: #3f7d5a;
     color: #fff;
     border-radius: 25px;
     padding: 0 1rem 0 1rem;
   }
   .search-btn:hover {
-    background-color:  #fe424d;
+    background-color: #2f6b4f;
     color: #fff;
   }
    .search-btn i {
@@ -24,9 +24,9 @@
 <nav class="navbar navbar-expand-md bg-white border-bottom sticky-top">
   <div class="container-fluid">
 
-    <a class="navbar-brand" href="/listings">
-      <i class="fa-regular fa-compass"></i>
-    </a>
+    <a class="navbar-brand campnest-logo" href="/listings">
+  CampNest
+</a>
 
     <button
       class="navbar-toggler"
@@ -59,7 +59,7 @@
             name="q"
             class="form-control me-2 search-inp"
             type="search"
-            placeholder="Search destination"
+            placeholder="Search cabins/camp"
           />
 
           <button class="btn search-btn" type="submit">
@@ -72,7 +72,7 @@
       <div class="navbar-nav ms-md-auto navbar-actions">
 
         <a class="nav-link" href="/listings/new">
-          Airbnb your home
+          List your cabin
         </a>
 
         <% if(!currUser) { %>

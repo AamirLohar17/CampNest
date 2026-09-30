@@ -1,408 +1,352 @@
 const sampleListings = [
   {
-    title: "Cozy Beachfront Cottage",
+    title: "Cozy Mountain Cabin",
     description:
-      "Escape to this charming beachfront cottage for a relaxing getaway. Enjoy stunning ocean views and easy access to the beach.",
+      "Escape to a peaceful mountain cabin surrounded by pine trees and breathtaking mountain views.",
     image: {
       filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHRyYXZlbHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
-    },
-    price: 1500,
-    location: "Malibu",
-    country: "United States",
-    category: "Trending",
-  },
-
-  {
-    title: "Modern Loft in Downtown",
-    description:
-      "Stay in the heart of the city in this stylish loft apartment. Perfect for urban explorers!",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHRyYXZlbHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
-    },
-    price: 1200,
-    location: "New York City",
-    country: "United States",
-    category: "Iconic cities",
-  },
-
-  {
-    title: "Mountain Retreat",
-    description:
-      "Unplug and unwind in this peaceful mountain cabin. Surrounded by nature, it's a perfect place to recharge.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8aG90ZWxzfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
-    },
-    price: 1000,
-    location: "Aspen",
-    country: "United States",
-    category: "Mountains",
-  },
-
-  {
-    title: "Historic Villa in Tuscany",
-    description:
-      "Experience the charm of Tuscany in this beautifully restored villa. Explore the rolling hills and vineyards.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aG90ZWxzfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
+      url: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=800&q=60",
     },
     price: 2500,
-    location: "Florence",
-    country: "Italy",
-    category: "Farms",
+    location: "Manali",
+    country: "India",
+    category: "Mountain Cabins",
   },
 
   {
-    title: "Secluded Treehouse Getaway",
+    title: "Forest Camping Retreat",
     description:
-      "Live among the treetops in this unique treehouse retreat. A true nature lover's paradise.",
+      "Enjoy a peaceful camping experience surrounded by forests, fresh air, and beautiful nature.",
     image: {
       filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGhvdGVsc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
-    },
-    price: 800,
-    location: "Portland",
-    country: "United States",
-    category: "Campings",
-  },
-
-  {
-    title: "Beachfront Paradise",
-    description:
-      "Step out of your door onto the sandy beach. This beachfront condo offers the ultimate relaxation.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGhvdGVsc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
-    },
-    price: 2000,
-    location: "Cancun",
-    country: "Mexico",
-    category: "Boats",
-  },
-
-  {
-    title: "Rustic Cabin by the Lake",
-    description:
-      "Spend your days fishing and kayaking on the serene lake. This cozy cabin is perfect for outdoor enthusiasts.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fG1vdW50YWlufGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
-    },
-    price: 900,
-    location: "Lake Tahoe",
-    country: "United States",
-    category: "Mountains",
-  },
-
-  {
-    title: "Luxury Penthouse with City Views",
-    description:
-      "Indulge in luxury living with panoramic city views from this stunning penthouse apartment.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1622396481328-9b1b78cdd9fd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c2t5JTIwdmFjYXRpb258ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60",
-    },
-    price: 3500,
-    location: "Los Angeles",
-    country: "United States",
-    category: "Rooms",
-  },
-
-  {
-    title: "Ski-In/Ski-Out Chalet",
-    description:
-      "Hit the slopes right from your doorstep in this ski-in/ski-out chalet in the Swiss Alps.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1502784444187-359ac186c5bb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHNreSUyMHZhY2F0aW9ufGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
-    },
-    price: 3000,
-    location: "Verbier",
-    country: "Switzerland",
-    category: "Arctic",
-  },
-
-  {
-    title: "Safari Lodge in the Serengeti",
-    description:
-      "Experience the thrill of the wild in a comfortable safari lodge. Witness the Great Migration up close.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjl8fG1vdW50YWlufGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
-    },
-    price: 4000,
-    location: "Serengeti National Park",
-    country: "Tanzania",
-    category: "Farms",
-  },
-
-  {
-    title: "Historic Canal House",
-    description:
-      "Stay in a piece of history in this beautifully preserved canal house in Amsterdam's iconic district.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2FtcGluZ3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
-    },
-    price: 1800,
-    location: "Amsterdam",
-    country: "Netherlands",
-    category: "Iconic cities",
-  },
-
-  {
-    title: "Private Island Retreat",
-    description:
-      "Have an entire island to yourself for a truly exclusive and unforgettable vacation experience.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1618140052121-39fc6db33972?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bG9kZ2V8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60",
-    },
-    price: 10000,
-    location: "Fiji",
-    country: "Fiji",
-    category: "Boats",
-  },
-
-  {
-    title: "Charming Cottage in the Cotswolds",
-    description:
-      "Escape to the picturesque Cotswolds in this quaint and charming cottage with a thatched roof.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1602088113235-229c19758e9f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8YmVhY2glMjB2YWNhdGlvbnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
+      url: "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=800&q=60",
     },
     price: 1200,
-    location: "Cotswolds",
-    country: "United Kingdom",
-    category: "Farms",
+    location: "Rishikesh",
+    country: "India",
+    category: "Camping",
   },
 
   {
-    title: "Historic Brownstone in Boston",
+    title: "Mountain View Cabin",
     description:
-      "Step back in time in this elegant historic brownstone located in the heart of Boston.",
+      "Wake up to stunning mountain views from this comfortable wooden cabin surrounded by nature.",
     image: {
       filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1533619239233-6280475a633a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHNreSUyMHZhY2F0aW9ufGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
+      url: "https://images.unsplash.com/photo-1521401830884-6c03c1c87ebb?auto=format&fit=crop&w=800&q=60",
     },
-    price: 2200,
-    location: "Boston",
-    country: "United States",
-    category: "Iconic cities",
-  },
-
-  {
-    title: "Beachfront Bungalow in Bali",
-    description:
-      "Relax on the sandy shores of Bali in this beautiful beachfront bungalow with a private pool.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1602391833977-358a52198938?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzJ8fGNhbXBpbmd8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60",
-    },
-    price: 1800,
-    location: "Bali",
-    country: "Indonesia",
-    category: "Boats",
-  },
-
-  {
-    title: "Mountain View Cabin in Banff",
-    description:
-      "Enjoy breathtaking mountain views from this cozy cabin in the Canadian Rockies.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1521401830884-6c03c1c87ebb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGxvZGdlfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
-    },
-    price: 1500,
+    price: 3000,
     location: "Banff",
     country: "Canada",
-    category: "Mountains",
+    category: "Mountain Cabins",
   },
 
   {
-    title: "Art Deco Apartment in Miami",
+    title: "Pine Forest Hideaway",
     description:
-      "Step into the glamour of the 1920s in this stylish Art Deco apartment in South Beach.",
+      "A cozy forest retreat tucked away among tall pine trees, perfect for a peaceful getaway.",
     image: {
       filename: "listingimage",
-      url: "https://plus.unsplash.com/premium_photo-1670963964797-942df1804579?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGxvZGdlfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
+      url: "https://images.unsplash.com/photo-1488462237308-ecaa28b729d7?auto=format&fit=crop&w=800&q=60",
     },
-    price: 1600,
-    location: "Miami",
+    price: 2200,
+    location: "Shimla",
+    country: "India",
+    category: "Forest",
+  },
+
+  {
+    title: "Lakeside Wooden Cabin",
+    description:
+      "Stay beside a beautiful mountain lake in this cozy wooden cabin with peaceful surroundings.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=60",
+    },
+    price: 2800,
+    location: "Lake Tahoe",
     country: "United States",
-    category: "Rooms",
+    category: "Lakeside",
   },
 
   {
-    title: "Tropical Villa in Phuket",
+    title: "Himalayan Adventure Camp",
     description:
-      "Escape to a tropical paradise in this luxurious villa with a private infinity pool in Phuket.",
+      "Experience the mountains with comfortable camping, scenic trails, and unforgettable outdoor adventures.",
     image: {
       filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1470165301023-58dab8118cc9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzYXJjaHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
+      url: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=800&q=60",
     },
-    price: 3000,
-    location: "Phuket",
-    country: "Thailand",
-    category: "Trending",
+    price: 1500,
+    location: "Kasol",
+    country: "India",
+    category: "Hiking",
   },
 
   {
-    title: "Historic Castle in Scotland",
+    title: "Luxury Forest Glamping",
     description:
-      "Live like royalty in this historic castle in the Scottish Highlands. Explore the rugged beauty of the area.",
+      "Enjoy the beauty of the forest with comfortable beds and the experience of sleeping close to nature.",
     image: {
       filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1585543805890-6051f7829f98?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzYXJjaHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
+      url: "https://images.unsplash.com/photo-1493246507139-91e8fad9978e?auto=format&fit=crop&w=800&q=60",
     },
-    price: 4000,
-    location: "Scottish Highlands",
-    country: "United Kingdom",
-    category: "Castles",
+    price: 3500,
+    location: "Coorg",
+    country: "India",
+    category: "Glamping",
   },
 
   {
-    title: "Desert Oasis in Dubai",
+    title: "Snowy Alpine Cabin",
     description:
-      "Experience luxury in the middle of the desert in this opulent oasis in Dubai with a private pool.",
+      "A warm and cozy cabin surrounded by snow-covered mountains, perfect for a winter escape.",
     image: {
       filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1518684079-3c830dcef090?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzYXJjaHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
-    },
-    price: 5000,
-    location: "Dubai",
-    country: "United Arab Emirates",
-    category: "Iconic cities",
-  },
-
-  {
-    title: "Rustic Log Cabin in Montana",
-    description:
-      "Unplug and unwind in this cozy log cabin surrounded by the natural beauty of Montana.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1586375300773-8384e3e4916f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzYXJjaHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
-    },
-    price: 1100,
-    location: "Montana",
-    country: "United States",
-    category: "Mountains",
-  },
-
-  {
-    title: "Beachfront Villa in Greece",
-    description:
-      "Enjoy the crystal-clear waters of the Mediterranean in this beautiful beachfront villa on a Greek island.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1602343168117-bb8ffe3e2e9f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzYXJjaHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
-    },
-    price: 2500,
-    location: "Mykonos",
-    country: "Greece",
-    category: "Boats",
-  },
-
-  {
-    title: "Eco-Friendly Treehouse Retreat",
-    description:
-      "Stay in an eco-friendly treehouse nestled in the forest. It's the perfect escape for nature lovers.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1488462237308-ecaa28b729d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzYXJjaHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
-    },
-    price: 750,
-    location: "Costa Rica",
-    country: "Costa Rica",
-    category: "Farms",
-  },
-
-  {
-    title: "Historic Cottage in Charleston",
-    description:
-      "Experience the charm of historic Charleston in this beautifully restored cottage with a private garden.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1587381420270-3e1a5b9e6904?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzYXJjaHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
-    },
-    price: 1600,
-    location: "Charleston",
-    country: "United States",
-    category: "Trending",
-  },
-
-  {
-    title: "Modern Apartment in Tokyo",
-    description:
-      "Explore the vibrant city of Tokyo from this modern and centrally located apartment.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1480796927426-f609979314bd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzYXJjaHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
-    },
-    price: 2000,
-    location: "Tokyo",
-    country: "Japan",
-    category: "Iconic cities",
-  },
-
-  {
-    title: "Lakefront Cabin in New Hampshire",
-    description:
-      "Spend your days by the lake in this cozy cabin in the scenic White Mountains of New Hampshire.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1578645510447-e20b4311e3ce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzYXJjaHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
-    },
-    price: 1200,
-    location: "New Hampshire",
-    country: "United States",
-    category: "Mountains",
-  },
-
-  {
-    title: "Luxury Villa in the Maldives",
-    description:
-      "Indulge in luxury in this overwater villa in the Maldives with stunning views of the Indian Ocean.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1439066615861-d1af74d74000?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx8fHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
-    },
-    price: 6000,
-    location: "Maldives",
-    country: "Maldives",
-    category: "Boats",
-  },
-
-  {
-    title: "Ski Chalet in Aspen",
-    description:
-      "Hit the slopes in style with this luxurious ski chalet in the world-famous Aspen ski resort.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzYXJjaHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
+      url: "https://images.unsplash.com/photo-1502784444187-359ac186c5bb?auto=format&fit=crop&w=800&q=60",
     },
     price: 4000,
     location: "Aspen",
     country: "United States",
-    category: "Arctic",
+    category: "Snow Cabins",
   },
 
   {
-    title: "Secluded Beach House in Costa Rica",
+    title: "Riverside Camping Spot",
     description:
-      "Escape to a secluded beach house on the Pacific coast of Costa Rica. Surf, relax, and unwind.",
+      "Set up camp beside a beautiful river and enjoy peaceful mornings surrounded by mountains and nature.",
     image: {
       filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzYXJjaHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
+      url: "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=800&q=60",
     },
-    price: 1800,
-    location: "Costa Rica",
-    country: "Costa Rica",
-    category: "Trending",
+    price: 1000,
+    location: "Kasol",
+    country: "India",
+    category: "Riverside",
+  },
+
+  {
+    title: "Rustic Log Cabin",
+    description:
+      "Unplug from everyday life in this rustic log cabin surrounded by the natural beauty of the mountains.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1586375300773-8384e3e4916f?auto=format&fit=crop&w=800&q=60",
+    },
+    price: 2700,
+    location: "Montana",
+    country: "United States",
+    category: "Mountain Cabins",
+  },
+
+  {
+    title: "Mountain Camp Under the Stars",
+    description:
+      "Spend the night under the stars at this scenic mountain campsite surrounded by untouched nature.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=800&q=60",
+    },
+    price: 1300,
+    location: "Ladakh",
+    country: "India",
+    category: "Camping",
+  },
+
+  {
+    title: "Himalayan Pine Cabin",
+    description:
+      "Relax in a charming cabin surrounded by pine forests and spectacular Himalayan scenery.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1602088113235-229c19758e9f?auto=format&fit=crop&w=800&q=60",
+    },
+    price: 2600,
+    location: "Mussoorie",
+    country: "India",
+    category: "Forest",
+  },
+
+  {
+    title: "Alpine Lake Cabin",
+    description:
+      "A peaceful cabin beside a crystal-clear mountain lake, ideal for hiking, fishing, and relaxation.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1578645510447-e20b4311e3ce?auto=format&fit=crop&w=800&q=60",
+    },
+    price: 3200,
+    location: "New Hampshire",
+    country: "United States",
+    category: "Lakeside",
+  },
+
+  {
+    title: "Mountain Trekking Basecamp",
+    description:
+      "Stay close to scenic mountain trails at this comfortable basecamp designed for outdoor explorers.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?auto=format&fit=crop&w=800&q=60",
+    },
+    price: 1400,
+    location: "Uttarakhand",
+    country: "India",
+    category: "Hiking",
+  },
+
+  {
+    title: "Luxury Mountain Glamping",
+    description:
+      "Experience nature without giving up comfort in this stylish glamping retreat with amazing mountain views.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&w=800&q=60",
+    },
+    price: 3800,
+    location: "Srinagar",
+    country: "India",
+    category: "Glamping",
+  },
+
+  {
+    title: "Swiss Snow Chalet",
+    description:
+      "Enjoy a cozy winter stay in a beautiful chalet surrounded by snow-covered alpine peaks.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1502784444187-359ac186c5bb?auto=format&fit=crop&w=800&q=60",
+    },
+    price: 5000,
+    location: "Verbier",
+    country: "Switzerland",
+    category: "Snow Cabins",
+  },
+
+  {
+    title: "Riverside Mountain Camp",
+    description:
+      "Camp beside a flowing river with mountain views, peaceful evenings, and plenty of outdoor activities.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1493246507139-91e8fad9978e?auto=format&fit=crop&w=800&q=60",
+    },
+    price: 1100,
+    location: "Rishikesh",
+    country: "India",
+    category: "Riverside",
+  },
+
+  {
+    title: "Banff Mountain Retreat",
+    description:
+      "Enjoy breathtaking views of the Canadian Rockies from this comfortable mountain cabin retreat.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1521401830884-6c03c1c87ebb?auto=format&fit=crop&w=800&q=60",
+    },
+    price: 4200,
+    location: "Banff",
+    country: "Canada",
+    category: "Mountain Cabins",
+  },
+
+  {
+    title: "Himalayan Forest Camp",
+    description:
+      "Reconnect with nature at this peaceful forest campsite surrounded by beautiful Himalayan landscapes.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1488462237308-ecaa28b729d7?auto=format&fit=crop&w=800&q=60",
+    },
+    price: 1250,
+    location: "Nainital",
+    country: "India",
+    category: "Camping",
+  },
+
+  {
+    title: "Woodland Cabin Escape",
+    description:
+      "A quiet wooden cabin hidden in the forest, offering privacy, fresh air, and peaceful surroundings.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1587381420270-3e1a5b9e6904?auto=format&fit=crop&w=800&q=60",
+    },
+    price: 2400,
+    location: "Ooty",
+    country: "India",
+    category: "Forest",
+  },
+
+  {
+    title: "Mountain Lake Retreat",
+    description:
+      "Relax beside a scenic alpine lake with easy access to hiking trails and outdoor adventures.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1439066615861-d1af74d74000?auto=format&fit=crop&w=800&q=60",
+    },
+    price: 2900,
+    location: "Lake Tahoe",
+    country: "United States",
+    category: "Lakeside",
+  },
+
+  {
+    title: "Hiking Cabin in the Rockies",
+    description:
+      "A comfortable cabin located near beautiful hiking trails and spectacular Rocky Mountain scenery.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=800&q=60",
+    },
+    price: 3100,
+    location: "Colorado",
+    country: "United States",
+    category: "Hiking",
+  },
+
+  {
+    title: "Eco Mountain Glamping",
+    description:
+      "Stay in a comfortable eco-friendly camp surrounded by mountains, forests, and fresh mountain air.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=800&q=60",
+    },
+    price: 3300,
+    location: "Manali",
+    country: "India",
+    category: "Glamping",
+  },
+
+  {
+    title: "Cozy Winter Mountain Cabin",
+    description:
+      "Warm up beside the fireplace after a day in the snow at this cozy mountain cabin retreat.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1586375300773-8384e3e4916f?auto=format&fit=crop&w=800&q=60",
+    },
+    price: 4500,
+    location: "Aspen",
+    country: "United States",
+    category: "Snow Cabins",
+  },
+
+  {
+    title: "Peaceful River Camp",
+    description:
+      "Enjoy riverside camping with beautiful mountain surroundings and peaceful outdoor experiences.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=800&q=60",
+    },
+    price: 1150,
+    location: "Rishikesh",
+    country: "India",
+    category: "Riverside",
   },
 ];
 

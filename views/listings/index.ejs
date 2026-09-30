@@ -2,68 +2,72 @@
 
 <!-- FILTERS -->
 <div id="filters" class="d-flex flex-wrap align-items-center gap-4">
-    <!-- Anchor tags add kiye gaye hain har filter ke upar -->
-    <a href="/listings?category=Trending" style="text-decoration: none; color: inherit;">
-        <div class="filter">
-            <div><i class="fa-solid fa-fire"></i></div>
-            <p>Trending</p>
-        </div>
-    </a>
-    <a href="/listings?category=Rooms" style="text-decoration: none; color: inherit;">
-        <div class="filter">
-            <div><i class="fa-solid fa-bed"></i></div>
-            <p>Rooms</p>
-        </div>
-    </a>
-<a href="/listings?category=Iconic cities" style="text-decoration: none; color: inherit;">
-        <div class="filter">
-            <div><i class="fa-solid fa-mountain-city"></i></div>
-            <p>Iconic cities</p>
-        </div>
-    </a>
-    <a href="/listings?category=Mountains" style="text-decoration: none; color: inherit;">
+
+    <a href="/listings?category=Mountain Cabins" style="text-decoration: none; color: inherit;">
         <div class="filter">
             <div><i class="fa-solid fa-mountain"></i></div>
-            <p>Mountains</p>
+            <p>Mountain Cabins</p>
         </div>
     </a>
-    <a href="/listings?category=Castles" style="text-decoration: none; color: inherit;">
-        <div class="filter">
-            <div><i class="fa-brands fa-fort-awesome"></i></div>
-            <p>Castles</p>
-        </div>
-    </a>
-    <a href="/listings?category=Arctic" style="text-decoration: none; color: inherit;">
-        <div class="filter">
-            <div><i class="fa-regular fa-snowflake"></i></div>
-            <p>Arctic</p>
-        </div>
-    </a>
-    <a href="/listings?category=Farms" style="text-decoration: none; color: inherit;">
-        <div class="filter">
-            <div><i class="fa-solid fa-cow"></i></div>
-            <p>Farms</p>
-        </div>
-    </a>
-    <a href="/listings?category=Campaings" style="text-decoration: none; color: inherit;">
+
+    <a href="/listings?category=Camping" style="text-decoration: none; color: inherit;">
         <div class="filter">
             <div><i class="fa-solid fa-tents"></i></div>
-            <p>Campaings</p>
+            <p>Camping</p>
         </div>
     </a>
-    <a href="/listings?category=Boats" style="text-decoration: none; color: inherit;">
+
+    <a href="/listings?category=Forest" style="text-decoration: none; color: inherit;">
         <div class="filter">
-            <div><i class="fa-solid fa-ship"></i></div>
-            <p>Boats</p>
+            <div><i class="fa-solid fa-tree"></i></div>
+            <p>Forest</p>
+        </div>
+    </a>
+
+    <a href="/listings?category=Lakeside" style="text-decoration: none; color: inherit;">
+        <div class="filter">
+            <div><i class="fa-solid fa-water"></i></div>
+            <p>Lakeside</p>
+        </div>
+    </a>
+
+    <a href="/listings?category=Hiking" style="text-decoration: none; color: inherit;">
+        <div class="filter">
+            <div><i class="fa-solid fa-person-hiking"></i></div>
+            <p>Hiking</p>
+        </div>
+    </a>
+
+    <a href="/listings?category=Glamping" style="text-decoration: none; color: inherit;">
+        <div class="filter">
+            <div><i class="fa-solid fa-campground"></i></div>
+            <p>Glamping</p>
+        </div>
+    </a>
+
+    <a href="/listings?category=Snow Cabins" style="text-decoration: none; color: inherit;">
+        <div class="filter">
+            <div><i class="fa-regular fa-snowflake"></i></div>
+            <p>Snow Cabins</p>
+        </div>
+    </a>
+
+    <a href="/listings?category=Riverside" style="text-decoration: none; color: inherit;">
+        <div class="filter">
+            <div><i class="fa-solid fa-water"></i></div>
+            <p>Riverside</p>
         </div>
     </a>
 
     <div class="tax-toggle">
         <div class="form-check-reverse form-switch">
             <input class="form-check-input" type="checkbox" role="switch" id="switchCheckDefault">
-            <label class="form-check-label" for="switchCheckDefault">Display total after taxes</label>
+            <label class="form-check-label" for="switchCheckDefault">
+                Display total after taxes
+            </label>
         </div>
     </div>
+
 </div>
 
 
@@ -79,7 +83,7 @@
                 <img
                     src="<%= listing.image.url %>"
                     class="card-img-top"
-                    alt="listings-image"
+                    alt="<%= listing.title %>"
                 >
 
                 <div class="card-img-overlay">
@@ -92,6 +96,9 @@
                         <br>
 
                         &#8377;<%= listing.price.toLocaleString("en-IN") %> /night
+
+                        <%= listing.country %>
+                        <br>
 
                         <i class="tax-info">
                             &nbsp;&nbsp;18% GST
