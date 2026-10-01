@@ -9,7 +9,7 @@ const listingSchema = new Schema({
     },
     description: {
         type: String,
-        default: "WanderLust Beautiful Places. It's your first & last destination to explore!",
+        default: "CampNest Beautiful Places. It's your first & last destination to explore!",
     },
     image: {
         url: String,
@@ -41,7 +41,7 @@ const listingSchema = new Schema({
   },
   category: {
     type: String,
-    enum: ["Trending", "Rooms", "Iconic cities", "Mountains", "Castles", "Arctic", "Farms", "Campaings", "Boats"],
+    enum: ["Mountain Cabins", "Camping", "Forest", "Lakeside", "Hiking", "Glamping", "Snow Cabins", "Riverside"],
     required: true
 },
 });
