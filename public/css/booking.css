@@ -1,0 +1,128 @@
+
+/* Booking Requests Dashboard */
+
+.booking-dashboard {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 16px;
+}
+
+.booking-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.booking-header h2 {
+  color: #2f6b4f;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.booking-subtitle {
+  color: #777;
+  margin: 0;
+}
+
+.booking-card {
+  border: 1px solid #e3e9e4;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  overflow: hidden;
+}
+
+.booking-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.10);
+}
+
+.booking-card .card-body {
+  padding: 24px;
+}
+
+.booking-card .card-title {
+  color: #2f6b4f;
+  font-weight: 700;
+  margin-bottom: 20px;
+  overflow-wrap: anywhere;
+}
+
+.booking-detail {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid #edf0ed;
+}
+
+.booking-detail:last-of-type {
+  border-bottom: none;
+}
+
+.booking-detail strong {
+  color: #444;
+}
+
+.booking-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.booking-actions .btn {
+  border-radius: 8px;
+  padding: 9px 18px;
+  font-weight: 600;
+}
+
+.booking-actions .btn-success {
+  background-color: #2f6b4f;
+  border-color: #2f6b4f;
+}
+
+.booking-actions .btn-success:hover {
+  background-color: #24533d;
+  border-color: #24533d;
+}
+
+.booking-empty {
+  padding: 36px 20px;
+  text-align: center;
+  background: #f5f8f5;
+  border: 1px dashed #cbd9ce;
+  border-radius: 12px;
+}
+
+.booking-empty h5 {
+  color: #2f6b4f;
+}
+
+@media (max-width: 576px) {
+  .booking-dashboard {
+    margin-top: 24px;
+    padding: 0 12px;
+  }
+
+  .booking-header {
+    align-items: stretch;
+  }
+
+  .booking-header .btn {
+    width: 100%;
+  }
+
+  .booking-card .card-body {
+    padding: 18px;
+  }
+
+  .booking-detail {
+    flex-direction: column;
+    gap: 4px;
+  }
+}

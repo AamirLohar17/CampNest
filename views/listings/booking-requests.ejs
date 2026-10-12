@@ -1,0 +1,90 @@
+
+<% layout("/layouts/boilerplate") %>
+
+<div class="booking-dashboard">
+  <div class="booking-header">
+    <div>
+      <h2>Booking Requests</h2>
+      <p class="booking-subtitle">
+        Listing: <strong><%= listing.title %></strong>
+      </p>
+    </div>
+
+    <a href="/listings/<%= listing._id %>" class="btn btn-outline-dark">
+      Back to Listing
+    </a>
+  </div>
+
+  <% if (bookings.length === 0) { %>
+    <div class="booking-empty">
+      <h5>No booking requests yet</h5>
+      <p class="mb-0">New guest requests will appear here.</p>
+    </div>
+  <% } else { %>
+    <div class="row g-3">
+      <% bookings.forEach((booking) => { %>
+        <div class="col-12 col-lg-6">
+          <div class="card booking-card h-100">
+            <div class="card-body">
+              <h5 class="card-title">
+                Guest: <%= booking.guest ? booking.guest.username : "User unavailable" %>
+              </h5>
+
+              <div class="booking-detail">
+                <strong>Check-in</strong>
+                <span><%= new Date(booking.checkIn).toLocaleDateString("en-IN") %></span>
+              </div>
+
+              <div class="booking-detail">
+                <strong>Check-out</strong>
+                <span><%= new Date(booking.checkOut).toLocaleDateString("en-IN") %></span>
+              </div>
+
+              <div class="booking-detail">
+                <strong>Guests</strong>
+                <span><%= booking.guests %></span>
+              </div>
+
+              <div class="booking-status">
+                <strong>Status:</strong>
+
+                <% if (booking.status === "Confirmed") { %>
+                  <span class="badge bg-success">Confirmed</span>
+                <% } else if (booking.status === "Rejected") { %>
+                  <span class="badge bg-danger">Rejected</span>
+                <% } else if (booking.status === "Cancelled") { %>
+                  <span class="badge bg-secondary">Cancelled</span>
+                <% } else { %>
+                  <span class="badge bg-warning text-dark">Pending</span>
+                <% } %>
+              </div>
+
+              <% if (booking.status === "Pending") { %>
+                <div class="booking-actions">
+                  <form
+                    method="POST"
+                    action="/listings/<%= listing._id %>/bookings/<%= booking._id %>/approve"
+                  >
+                    <button type="submit" class="btn btn-success">
+                      Approve
+                    </button>
+                  </form>
+
+                  <form
+                    method="POST"
+                    action="/listings/<%= listing._id %>/bookings/<%= booking._id %>/reject"
+                    onsubmit="return confirm('Are you sure you want to reject this booking?');"
+                  >
+                    <button type="submit" class="btn btn-outline-danger">
+                      Reject
+                    </button>
+                  </form>
+                </div>
+              <% } %>
+            </div>
+          </div>
+        </div>
+      <% }); %>
+    </div>
+  <% } %>
+</div>

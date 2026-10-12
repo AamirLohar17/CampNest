@@ -1,0 +1,101 @@
+/* NEW LISTING */
+
+.add-btn {
+    background-color: #2f6b4f !important;
+    border: none !important;
+    padding: 0.5rem 1.5rem;
+}
+
+/* EDIT LISTING */
+
+.edit-btn {
+    background-color: #2f6b4f !important;
+    border: none !important;
+    padding: 0.5rem 1.5rem;
+}
+
+#imgurl {
+    width: 100%;
+    max-width: 400px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+/* LOGIN */
+
+.login-wrapper {
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 430px;
+    padding: 2rem;
+    border: 1px solid #e5e5e5;
+    border-radius: 1rem;
+    background-color: #fff;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.login-title {
+    text-align: center;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.login-subtitle {
+    text-align: center;
+    color: #777;
+    margin-bottom: 2rem;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 0.7rem;
+    border-radius: 0.6rem;
+    font-weight: 500;
+}
+
+/* SIGNUP */
+
+.signup-wrapper {
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+}
+
+.signup-card {
+    width: 100%;
+    max-width: 430px;
+    padding: 2rem;
+    border: 1px solid #e5e5e5;
+    border-radius: 1rem;
+    background-color: #fff;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.signup-title {
+    text-align: center;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.signup-subtitle {
+    text-align: center;
+    color: #777;
+    margin-bottom: 2rem;
+}
+
+.signup-btn {
+    width: 100%;
+    padding: 0.7rem;
+    border-radius: 0.6rem;
+    font-weight: 500;
+}

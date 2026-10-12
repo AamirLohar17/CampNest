@@ -21,19 +21,81 @@
       <p class="card-text">&#8377;<%= listing.price.toLocaleString("en-IN") %>/night </p>
       <p class="card-text"><%= listing.location %> </p> 
       <p class="card-text"><%= listing.country %> </p>
+      
+      
+    <% if (currUser && !currUser._id.equals(listing.owner._id)) { %>
+      <hr>
+      <h4>Book Your Stay</h4>
+
+      <form
+        action="/listings/<%= listing._id %>/bookings"
+        method="POST"
+        class="mb-3"
+      >
+        <div class="mb-3">
+          <label for="checkIn" class="form-label">Check-in</label>
+          <input
+            type="date"
+            id="checkIn"
+            name="checkIn"
+            class="form-control"
+            required
+          >
+        </div>
+
+        <div class="mb-3">
+          <label for="checkOut" class="form-label">Check-out</label>
+          <input
+            type="date"
+            id="checkOut"
+            name="checkOut"
+            class="form-control"
+            required
+          >
+        </div>
+
+        <div class="mb-3">
+          <label for="guests" class="form-label">Guests</label>
+          <input
+            type="number"
+            id="guests"
+            name="guests"
+            class="form-control"
+            min="1"
+            value="1"
+            required
+          >
+        </div>
+
+        <button type="submit" class="btn btn-success">
+          Request to Book
+        </button>
+      </form>
+    <% } %>
     </div>
+
   </div>
   <br />
   <% if(currUser && currUser._id.equals(listing.owner._id)) { %>
-  <div class="btns mb-3">
-    <a
-      href="/listings/<%=listing._id%>/edit"
-      class="btn btn-dark edit-btn col-1 offset-3">Edit</a>
+      <div class="btns mb-3">
+        <a
+          href="/listings/<%= listing._id %>/edit"
+          class="btn btn-dark edit-btn offset-2 offset-md-3">
+          Edit
+        </a>
 
-    <form method="POST" action="/listings/<%=listing._id%>?_method=DELETE">
-      <button class="btn btn-dark offset-5">Delete</button>
-    </form>
-  </div>
+        <form
+          method="POST"
+          action="/listings/<%= listing._id %>?_method=DELETE">
+          <button class="btn btn-dark" type="submit">Delete</button>
+        </form>
+
+        <a
+          href="/listings/<%= listing._id %>/bookings/manage"
+          class="btn btn-outline-success">
+          Manage Bookings
+        </a>
+    </div>
   <% } %>
   <div class="col-12 col-md-8 offset-md-3 mb-3">
     <% if(currUser) { %>
@@ -103,5 +165,6 @@
 </div>
 
 <script src="/js/map.js"></script>
+<script src="/js/booking.js"></script>
 
  
