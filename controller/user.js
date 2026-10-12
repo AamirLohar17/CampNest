@@ -47,7 +47,7 @@ module.exports.renderLoginForm = (req, res) => {
 
 //login
 module.exports.login = async (req, res) => {
-    req.flash("success", "Welcome back to Wanderlust!");
+    req.flash("success", "Welcome back to CampNest!");
     let redirectUrl = res.locals.redirectUrl || "/listings";
 
     // Force session to save before redirecting!
@@ -62,7 +62,7 @@ module.exports.logout = (req, res, next) => {
     if ( err ){
       return next(err);
     }
-    req.flash("error", "you are logged out!");
+    req.flash("error", "You are logged out!");
     res.redirect("/listings");
   })
 }
